@@ -1,0 +1,44 @@
+{
+    "configurePresets": [
+        {
+            "generator": "Visual Studio 16 2019",
+            "toolset": "v142",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "hidden": true,
+            "name": "base"
+        },
+        {
+            "architecture": "x64",
+            "displayName": "64-bit",
+            "inherits": [
+                "base"
+            ],
+            "name": "x64"
+        },
+        {
+            "architecture": "Win32",
+            "displayName": "32-bit",
+            "inherits": [
+                "base"
+            ],
+            "name": "x86"
+        }
+    ],
+    "buildPresets": [
+        {
+            "configurePreset": "x64",
+            "displayName": "x64",
+            "name": "x64"
+        },
+        {
+            "configurePreset": "x86",
+            "displayName": "x86",
+            "name": "x86"
+        }
+    ],
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 24
+    },
+    "version": 3
+}
